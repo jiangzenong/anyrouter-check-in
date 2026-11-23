@@ -12,6 +12,7 @@ jobs:
   notify:
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'failure'
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: 推送到本地 Agent 监听通道
         env:
